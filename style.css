@@ -1,0 +1,126 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(pexels-felixmittermeier-956999.jpg);
+}
+
+
+/* BOM Challenge */
+h1 {
+    margin: 20px auto;
+    width: fit-content;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 40px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    justify-content: center;
+    & form, .tasks-box {
+        padding: 20px;
+        margin-inline: 20px;
+        background-color: rgba(255, 255, 255, 0.242);
+        /* width: 400px; */
+        min-width: 300px;
+        border-radius: 25px;
+    }
+    & form {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        column-gap: 10px;
+        & .add {
+        color: white;
+        background-color: rgb(16 141 16);
+        border-radius: 5px;
+        padding: 8px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        }
+        & .add:hover {
+            background-color: rgb(0 255 0);
+            box-shadow: 0 0 10px 1px white;
+        }
+        & .input {
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        }
+    }
+    & .tasks-box {
+        & h4 {
+        margin: 0;
+        text-align: center;
+        color: white;
+        letter-spacing: 2px;
+        }
+        & .tasks-list {
+            color: white;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: grid;
+            grid-template-rows: auto;
+            row-gap: 10px;
+                & .task {
+                    display: flex;
+                    background-color: white;
+                    padding: 8px;
+                    border-radius: 5px;
+                    justify-content: space-between;
+                    & .task-text {
+                    color: black;
+                    flex: 85%;
+                    margin: 0;
+                    word-wrap:break-word;
+                    width: 200px;
+                    padding-left: 5px;
+                    align-self: center;
+                    }
+                    & .dlt-btn {
+                    color: white;
+                    background-color: rgb(185 20 20);
+                    border: none;
+                    flex: 15%;
+                    border-radius: 5px; 
+                    font-weight: bold;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 8px;
+                    align-self: center;
+                    justify-self: end;
+                    cursor: pointer;
+                    transition: 0.2s;
+                    }
+                    & .dlt-btn:hover {
+                    background-color: rgb(255 0 0);
+                    box-shadow: 0 0 10px 1px rgb(219, 19, 19);
+                    }
+            }
+        }
+    }
+    & .copy-right {
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        width: fit-content;
+        justify-self: center;
+        & p {
+        margin: 0;
+        font-size: initial;
+        color: #0be8fe;
+        }
+    }
+}
